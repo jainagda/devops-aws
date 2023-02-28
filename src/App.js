@@ -17,7 +17,7 @@ function App() {
       <Routes>
         <Route path="/"  exact element={<Home />}>
           {/* <Route index element={<Home />} /> */}
-          {/* <Route   path="/user"  exact={true} element={<CreateUser/>} /> */}
+          <Route   path="user"  exact={true} element={<CreateUser/>} />
           {/* <Route path="contact" element={<Contact />} /> */}
           {/* <Route path="*" element={<NoPage />} /> */}
         </Route>

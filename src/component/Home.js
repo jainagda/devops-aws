@@ -55,7 +55,7 @@ export default function Home() {
             paddingLeft: "5%",
             paddingBottom: "8%", }}>
             <label style={{ fontSize: "40px",fontWeight:"bold" }}>
-              Development & Operations{" "}
+              Development & Operations
             </label>
 
             <div style={{fontSize:"15px",fontFamily:"cursive",marginTop:"20px"}}>
@@ -84,7 +84,7 @@ export default function Home() {
 
         <img src={logo} className="App-logo" alt="logo" />
       </div>
-      <div>
+      {/* <div>
         <h2 style={{ paddingTop:"30px", paddingLeft:"50px",display:"flex",color:"black", fontSize:"30px"}}> Devops Road-Map </h2>
         <img src={RoadMap} />
       </div>
@@ -96,31 +96,7 @@ export default function Home() {
         <img width="100%" src={deployReact} /> 
         <img width="100%" src={archDiagramWeb} /> 
             </div>
-      </div>
-      {/* <div className="App"> */}
-        {/* <div className="container mrgnbtm"> */}
-          {/* <div className="row"> */}
-             {/* <div className="col-md-8"> */}
-                {/* <CreateUser 
-                  user={state.user}
-                  onChangeForm={onChangeForm}
-                  createUser={createUser}
-                  >
-                </CreateUser> */}
-          {/* </div>  */}
-            {/* <div className="col-md-4">
-                <DisplayBoard
-                  numberOfUsers={this.state.numberOfUsers}
-                  getAllUsers={this.getAllUsers}
-                >
-                </DisplayBoard>
-            </div> */}
-        
-      
-  
-          {/* <Users users={this.state.users}></Users> */}
-      
-      {/* </div> */}
+      </div> */}
     </>
   );
 }
