@@ -2,7 +2,7 @@ import React , {useState} from "react";
 import Header from "./Header";
 import LogoInfinity from "./LogoInfinity";
 import logo from '../logo.svg';
-import DevOpsEngineer from "../assest/image/devops-developer1.png"
+import DevOpsEngineer from "../assest/image/devops.png"
 import RoadMap from "../assest/image/Road-map.jpeg"
 import deployReact from "../assest/image/deploy-react.png"
 import archDiagramWeb from "../assest/image/arch-diagram-web.png"
@@ -10,7 +10,7 @@ import CreateUser from "./user/CreateUser";
 import { Users } from "./user/Users";
 import { getAllUsers, createUser } from '../services/UserService'
 
-export default function Home() {
+const Home=()=> {
       const [state ,setState]= useState({  
          user: {},
         users: [],
@@ -54,18 +54,13 @@ export default function Home() {
           <div style={{ width: "30%" , paddingTop: "8%",
             paddingLeft: "5%",
             paddingBottom: "8%", }}>
-            <label style={{ fontSize: "40px",fontWeight:"bold" }}>
+            <label style={{ fontSize: "30px",fontWeight:"bold" }}>
               Development & Operations
             </label>
 
             <div style={{fontSize:"15px",fontFamily:"cursive",marginTop:"20px"}}>
               
-                DevOps is the combination of cultural philosophies, practices,
-                and tools that increases an organization’s ability to deliver
-                applications and services at high velocity: evolving and
-                improving products at a faster pace than organizations using
-                traditional software development and infrastructure management
-                processes
+            DevOps is a methodology in the software development and IT industry. Used as a set of practices and tools, DevOps integrates and automates the work of software development and IT operations as a means for improving and shortening the systems development life cycle
             
             </div>
           </div>
@@ -82,7 +77,7 @@ export default function Home() {
 <h2 style={{ display:"flex",color:"white", fontSize:"30px"}}> This is the React app {process.env.REACT_APP_Version}
         </h2>
 
-        <img src={logo} className="App-logo" alt="logo" />
+        {/* <img src={logo} className="App-logo" alt="logo" /> */}
       </div>
       {/* <div>
         <h2 style={{ paddingTop:"30px", paddingLeft:"50px",display:"flex",color:"black", fontSize:"30px"}}> Devops Road-Map </h2>
@@ -101,7 +96,7 @@ export default function Home() {
   );
 }
 
-
+export default Home;
 // background-image: linear-gradient(rgb(99, 116, 199), rgb(99, 116, 199)), url(/_next/static/media/AuditBanner.52540bb3.png);
 
 // background-color: rgb(245 245 245 / var(--tw-bg-opacity));

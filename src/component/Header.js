@@ -13,10 +13,13 @@ import Tooltip from "@mui/material/Tooltip";
 import MenuItem from "@mui/material/MenuItem";
 import AdbIcon from "@mui/icons-material/Adb";
 import devopsLogo from "../assest/image/logoDevops.png";
+
+import { useNavigate  } from 'react-router-dom';
 const pages = ["Products", "Pricing", "Blog"];
 const settings = ["Profile", "Account", "Dashboard", "Logout"];
 
 function Header() {
+   const navigate = useNavigate();
   const [anchorElNav, setAnchorElNav] = React.useState(null);
   const [anchorElUser, setAnchorElUser] = React.useState(null);
 
@@ -24,7 +27,8 @@ function Header() {
     setAnchorElNav(event.currentTarget);
   };
   const handleOpenUserMenu = (event) => {
-    setAnchorElUser(event.currentTarget);
+    navigate('/user');
+    // setAnchorElUser(event.currentTarget);
   };
 
   const handleCloseNavMenu = () => {
@@ -36,8 +40,8 @@ function Header() {
   };
 
   return (
-    <div style={{ backgroundColor: "#E1DAD8", padding: "10px" }}>
-      <Container maxWidth="xl">
+    <div style={{ backgroundColor: "#E1DAD8" }}>
+      <div style={{padding:"20px", marginLeft:"20px",marginRight:"20px"}}  maxWidth="xl">
         <Toolbar disableGutters>
           <img
             src={devopsLogo}
@@ -138,7 +142,7 @@ function Header() {
           </Box>
 
           <Box sx={{ flexGrow: 0 }}>
-            <Tooltip title="Open settings">
+            <Tooltip >
               {/* <IconButton sx={{ p: 0 }}> */}
               <Button
                 onClick={handleOpenUserMenu}
@@ -149,7 +153,7 @@ function Header() {
                   display: "block",
                 }}
               >
-                Login
+               Sign Up
               </Button>
               {/* <Avatar alt="Remy Sharp" src="/static/images/avatar/2.jpg" /> */}
               {/* </IconButton> */}
@@ -178,7 +182,7 @@ function Header() {
             </Menu>
           </Box>
         </Toolbar>
-      </Container>
+      </div>
     </div>
   );
 }
