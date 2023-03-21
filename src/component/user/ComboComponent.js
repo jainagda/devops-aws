@@ -22,7 +22,7 @@ const ComboComponent = () => {
   async function createUser() {
     console.log("data", userData);
     console.log("datanfgnfgnzfgnnnnfgn", JSON.stringify(userData));
-    const response = await fetch(`${BASE_URL}/api/user`, {
+    const response = await fetch(`${process.env.REACT_APP_BASE_URL}/api/user`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ user: userData }),
@@ -52,8 +52,8 @@ const ComboComponent = () => {
   // }
 
 async function getAllUsers() {
-    console.log("base URL ",BASE_URL)
-    const response = await fetch(`${BASE_URL}/api/user`);
+    console.log("base process.env_REACT_APP_BASE_URL ",process.env.REACT_APP_BASE_URL)
+    const response = await fetch(`${process.env.REACT_APP_BASE_URL}/api/user`);
     // console.log("getAllUsers",response.json())
     let data = await response.json();
     console.log("apun ka item",data)

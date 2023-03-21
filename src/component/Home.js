@@ -74,7 +74,7 @@ const Home=()=> {
       </div>
       <LogoInfinity />
       <div className="App-header" style={{ paddingTop:"80px"}}>
-<h2 style={{ display:"flex",color:"white", fontSize:"30px"}}> This is the React app {process.env.REACT_APP_Version}
+<h2 style={{ display:"flex",color:"white", fontSize:"30px"}}>{process.env.REACT_APP_Version}
         </h2>
 
         {/* <img src={logo} className="App-logo" alt="logo" /> */}
