@@ -32,7 +32,7 @@ function Header() {
   };
 
   const handleCloseNavMenu = () => {
-    setAnchorElNav(null);
+    navigate('/blog');
   };
 
   const handleCloseUserMenu = () => {
@@ -98,11 +98,11 @@ function Header() {
               }}
               style={{ color: "black" }}
             >
-              {pages.map((page) => (
-                <MenuItem key={page} onClick={handleCloseNavMenu}>
-                  <Typography textAlign="center">{page}</Typography>
+              {/* {pages.map((page) => ( */}
+                <MenuItem  onClick={handleCloseNavMenu}>
+                  <Typography textAlign="center"> Blog</Typography>
                 </MenuItem>
-              ))}
+              {/* ))} */}
             </Menu>
           </Box>
           <AdbIcon sx={{ display: { xs: "flex", md: "none" }, mr: 1 }} />
@@ -125,9 +125,22 @@ function Header() {
             DevOps
           </Typography>
           <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
-            {pages.map((page) => (
+            {/* {pages.map((page) => ( */}
+            <Button
+                // key={page}
+                // onClick={handleCloseNavMenu}
+                sx={{
+                  my: 2,
+                  fontFamily: "cursive",
+                  color: "black",
+                  display: "block",
+                }}
+              >
+          Product
+              </Button>
+            
               <Button
-                key={page}
+                // key={page}
                 onClick={handleCloseNavMenu}
                 sx={{
                   my: 2,
@@ -136,9 +149,9 @@ function Header() {
                   display: "block",
                 }}
               >
-                {page}
+          Blog
               </Button>
-            ))}
+            {/* ))} */}
           </Box>
 
           <Box sx={{ flexGrow: 0 }}>
